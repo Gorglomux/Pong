@@ -91,7 +91,21 @@ class PlayState extends FlxState
 				gameOver("Opponent");
 				over=true;
 			}
-			_opponent.velocity.y=_ball.velocity.y;
+
+			if(_ball.y+5<_opponent.y+25&&_ball.x>160&&_opponent.y>0){
+				_opponent.velocity.y=-100;
+			}
+			else if(_ball.y+5>_opponent.y+25&&_opponent.y+50<320&&_ball.x>160){
+				_opponent.velocity.y=100;
+			}else{
+				if(_opponent.y<70){
+					_opponent.velocity.y=50;
+				}else if (_opponent.y>120){
+					_opponent.velocity.y=-50;
+				}else{
+					_opponent.velocity.y=0;
+				}
+			}
 
 			previousBallVelocity=_ball.velocity.y;
 			

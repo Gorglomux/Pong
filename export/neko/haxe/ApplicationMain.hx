@@ -39,7 +39,7 @@ import haxe.macro.Expr;
 		
 		ManifestResources.init (config);
 		
-		app.meta["build"] = "3";
+		app.meta["build"] = "12";
 		app.meta["company"] = "HaxeFlixel";
 		app.meta["file"] = "Pong";
 		app.meta["name"] = "Pong";
